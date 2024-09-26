@@ -5,6 +5,7 @@ exports.postsCreate = async (req, res) => {
     if (req.file) {
       req.body.image = req.file.path;
     }
+    console.log(req.)
     const newPost = await Post.create(req.body);
     res.status(201).json(newPost);
   } catch (error) {
